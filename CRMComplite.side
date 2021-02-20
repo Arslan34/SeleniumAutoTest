@@ -1,0 +1,208 @@
+{
+  "id": "f988ab85-bff4-40c5-9a8e-f4bef3c8e2da",
+  "version": "2.0",
+  "name": "CRM",
+  "url": "https://crm.geekbrains.space",
+  "tests": [{
+    "id": "f9c77d5e-b43a-44cc-97f9-f4bd1e367e76",
+    "name": "CRM",
+    "commands": [{
+      "id": "ee1cf042-cbec-4e5e-92c2-a6d3761b9652",
+      "comment": "Открываем страницу",
+      "command": "open",
+      "target": "/user/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3fc69075-1a33-4bc5-90f8-e003b04fbcc9",
+      "comment": "Размер окна",
+      "command": "setWindowSize",
+      "target": "1059x887",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3da279c2-7833-43df-97f5-994d7ee0c02a",
+      "comment": "Выбираем поле логин",
+      "command": "click",
+      "target": "id=prependedInput",
+      "targets": [
+        ["id=prependedInput", "id"],
+        ["name=_username", "name"],
+        ["css=#prependedInput", "css:finder"],
+        ["xpath=//input[@id='prependedInput']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/fieldset/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f78704c4-089e-4a56-8c97-f590ae0aed5a",
+      "comment": "Вводим логин",
+      "command": "type",
+      "target": "id=prependedInput",
+      "targets": [
+        ["id=prependedInput", "id"],
+        ["name=_username", "name"],
+        ["css=#prependedInput", "css:finder"],
+        ["xpath=//input[@id='prependedInput']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/fieldset/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Applanatest"
+    }, {
+      "id": "314f9ec3-5dcd-48b0-9e64-539963ad3191",
+      "comment": "Выбираем поле пароль",
+      "command": "click",
+      "target": "id=prependedInput2",
+      "targets": [
+        ["id=prependedInput2", "id"],
+        ["name=_password", "name"],
+        ["css=#prependedInput2", "css:finder"],
+        ["xpath=//input[@id='prependedInput2']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/fieldset/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "77a37e13-a550-4717-b343-9795cda397b8",
+      "comment": "Вводим пароль",
+      "command": "type",
+      "target": "id=prependedInput2",
+      "targets": [
+        ["id=prependedInput2", "id"],
+        ["name=_password", "name"],
+        ["css=#prependedInput2", "css:finder"],
+        ["xpath=//input[@id='prependedInput2']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/fieldset/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Student2020!"
+    }, {
+      "id": "0f5fdaec-5e66-43f4-9e57-0fe54b3ad286",
+      "comment": "Выбираем Войти",
+      "command": "click",
+      "target": "id=_submit",
+      "targets": [
+        ["id=_submit", "id"],
+        ["name=_submit", "name"],
+        ["css=#\\_submit", "css:finder"],
+        ["xpath=//button[@id='_submit']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/fieldset/div[3]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Войти')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aac332c7-ab15-4efa-bae6-d6234bae29b3",
+      "comment": "Проверка логирования",
+      "command": "assertElementPresent",
+      "target": "linkText=Маслов Александр",
+      "targets": [
+        ["linkText=Маслов Александр", "linkText"],
+        ["css=#user-menu > .dropdown-toggle", "css:finder"],
+        ["xpath=//a[contains(text(),'Маслов Александр')]", "xpath:link"],
+        ["xpath=//li[@id='user-menu']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'javascript: void(0);')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3b7313a7-f1b0-4085-8ad9-b2850aeb03c5",
+      "comment": "Подводим курсор для выпадения меню",
+      "command": "mouseOver",
+      "target": "css=.dropdown:nth-child(3) > .unclickable > .title",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c52a2676-7fb9-473b-88c9-46fc67da01e8",
+      "comment": "Выбираем пункт меню",
+      "command": "click",
+      "target": "css=.dropdown:nth-child(3) .single:nth-child(4) .title",
+      "targets": [
+        ["css=.dropdown:nth-child(3) .single:nth-child(4) .title", "css:finder"],
+        ["xpath=//div[@id='main-menu']/ul/li[3]/ul/li[4]/a/span", "xpath:idRelative"],
+        ["xpath=//li[3]/ul/li[4]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Мои проекты')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4df165c6-d402-4c61-9089-68e0daa10278",
+      "comment": "Выбираем пункт Создать проект",
+      "command": "click",
+      "target": "linkText=Создать проект",
+      "targets": [
+        ["linkText=Создать проект", "linkText"],
+        ["css=.back", "css:finder"],
+        ["xpath=(//a[contains(text(),'Создать проект')])[3]", "xpath:link"],
+        ["xpath=//div[@id='container']/div/div/div/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/project/create/')])[3]", "xpath:href"],
+        ["xpath=//div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "66b30303-65ab-45a6-b2a9-27703007ebbd",
+      "comment": "",
+      "command": "type",
+      "target": "name=crm_project[name]",
+      "targets": [
+        ["id=crm_project_name-uid-6030f2130c55e", "id"],
+        ["name=crm_project[name]", "name"],
+        ["css=#crm_project_name-uid-6030f2130c55e", "css:finder"],
+        ["xpath=//input[@id='crm_project_name-uid-6030f2130c55e']", "xpath:attributes"],
+        ["xpath=//form[@id='crm_project-uid-6030f2136d4ef']/div[2]/div[3]/div/div/div[2]/fieldset/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "Test1235678959++---"
+    }, {
+      "id": "7ddc999e-9524-496a-b99c-9bb102b55969",
+      "comment": "",
+      "command": "select",
+      "target": "xpath=//html/body/div[2]/div/div[2]/div[3]/form/div[2]/div[3]/div/div[1]/div[2]/fieldset/div[2]/div[5]/div[2]/div/select",
+      "targets": [],
+      "value": "label=Research & Development"
+    }, {
+      "id": "b57270b7-357f-4570-9993-d7229adeb8dc",
+      "comment": "",
+      "command": "select",
+      "target": "xpath=//html/body/div[2]/div/div[2]/div[3]/form/div[2]/div[3]/div/div[1]/div[2]/fieldset/div[2]/div[6]/div[2]/div/select",
+      "targets": [],
+      "value": "label=Амелин Владимир"
+    }, {
+      "id": "9ac10239-1005-4b35-a66e-3e0081c8ef01",
+      "comment": "",
+      "command": "select",
+      "target": "xpath=//html/body/div[2]/div/div[2]/div[3]/form/div[2]/div[3]/div/div[1]/div[2]/fieldset/div[2]/div[7]/div[2]/div/select",
+      "targets": [],
+      "value": "label=Ермакова Анастасия"
+    }, {
+      "id": "7f84bc93-5f6c-4adb-b5eb-2de1d115727d",
+      "comment": "",
+      "command": "select",
+      "target": "xpath=//html/body/div[2]/div/div[2]/div[3]/form/div[2]/div[3]/div/div[1]/div[2]/fieldset/div[2]/div[9]/div[2]/div/select",
+      "targets": [],
+      "value": "label=Амелин Владимир"
+    }, {
+      "id": "83f494b5-dd1e-4f32-8fee-3b8299a1a5de",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-group:nth-child(4) > .btn",
+      "targets": [
+        ["css=.btn-group:nth-child(4) > .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[4]", "xpath:attributes"],
+        ["xpath=//form[@id='crm_project-uid-6030f9c1345f1']/div/div/div/div[2]/div/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Сохранить и закрыть')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "9e5bfa7c-15dc-43b5-89b0-ae074ae7aae1",
+    "name": "Regress",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://crm.geekbrains.space/"],
+  "plugins": []
+}
